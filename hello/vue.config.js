@@ -5,6 +5,9 @@ module.exports = {
   publicPath: "http://localhost:5001",
   transpileDependencies: true,
   configureWebpack: {
+    optimization: {
+      splitChunks: false,
+    },
     plugins: [
       new ModuleFederationPlugin({
         name: "hello",
